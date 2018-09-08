@@ -1,0 +1,78 @@
+<div class="ng-tns-c5-0 ng-trigger ng-trigger-routerTransition" style="background-color: black;height: 550px;">
+
+  <div class="row justify-content-md-center">
+    <div class="col-md-4" style="color:white ; margin-left: 700px;">
+      <span style="font-size: 29px;padding-left: 90px;">Hii {{user.sname}}</span>
+    </div>
+  </div>
+
+  <div class="card mb-3" style="border: hidden;">
+    <div class="card-body table-responsive" style="background-color: black;height: 200px;">
+      <table border=2 px solid black style="margin: 0 auto;height: 40px;width: 35%;text-align: center;color: white">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Edit</th>
+        </tr>
+        <tr>
+          <td>{{user.sname}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.age}}</td>
+          <td>
+            <button class="btn rounded-btn" (click)="edit()">Edit</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <div style="background-color: black;width: 85%;margin: 0 auto;height: 50%;margin-top: -15px;">
+    
+    <form name="form">
+      <div class="form-content">
+        <div class="form-group">
+            <input type="text" [(ngModel)]= "name" name="name" class="form-control input-underline input-lg" placeholder="Full Name">
+            <!-- <div *ngIf="profileform.controls.username.invalid && profileform.controls.username.touched">
+                <small *ngIf="profileform.controls.username.errors.required" style="font-size: 14px ;">
+                    <b>Name is required</b>
+                </small>
+            </div> -->
+        </div>
+
+        <div class="form-group marginTop">
+            <input type="email" email="true" [(ngModel)]= "email" name="email" class="form-control input-underline input-lg marginAuto" placeholder="Email">
+            <!-- <div *ngIf="profileform.invalid && (profileform.controls.email.invalid && profileform.controls.email.touched)">
+                <small *ngIf="profileform.invalid || profileform.controls.email.errors.required" style="font-size: 14px ;">
+                    <b>Email is required</b>
+                </small>
+            </div> -->
+
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control input-underline input-lg" placeholder="Password">
+            <!-- <div *ngIf=" profileform.controls.password.invalid && profileform.controls.password.touched">
+                <small  *ngIf="profileform.controls.password.errors.required" style="font-size: 14px ;">
+                    <b>Password is required</b>
+                </small>
+            </div> -->
+
+        </div>
+        <div class="form-group marginTop">
+            <input type="text" [(ngModel)]= "age" name="age"  class="form-control input-underline input-lg marginAuto" placeholder="Age">
+        </div>
+    </div>
+    <div class="button-style">
+        <button type="submit" class="btn rounded-btn" (click)="update()" [disabled]="updatebtn"> Update </button>&nbsp;      
+    </div>
+    
+    </form>
+  </div>
+
+
+
+
+
+</div>
